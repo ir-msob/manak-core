@@ -1,4 +1,4 @@
-package ir.msob.manak.core.test.jima.crud.base.childdomain;
+package ir.msob.manak.core.test.jima.crud.restful.childdomain;
 
 import ir.msob.manak.core.model.jima.childdomain.characteristic.Characteristic;
 import ir.msob.manak.core.model.jima.childdomain.characteristic.CharacteristicCriteria;

@@ -1,5 +1,6 @@
-package ir.msob.manak.core.test.jima.crud.base.domain;
+package ir.msob.manak.core.test.jima.crud.kafka.domain;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudRepository;
 import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudService;
 import ir.msob.manak.core.model.jima.channel.ChannelTypeReference;
@@ -12,13 +13,16 @@ import ir.msob.jima.core.beans.properties.JimaProperties;
 import ir.msob.jima.core.ral.mongo.commons.query.QueryBuilder;
 import ir.msob.jima.crud.api.kafka.client.ChannelUtil;
 import ir.msob.jima.crud.api.kafka.test.domain.BaseDomainCrudKafkaListenerTest;
+import ir.msob.manak.core.test.jima.crud.base.domain.DomainCrudDataProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 
+import java.lang.reflect.Type;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
+import java.util.Collection;
 import java.util.UUID;
 
 public abstract class DomainCrudKafkaListenerTest<
@@ -94,5 +98,15 @@ public abstract class DomainCrudKafkaListenerTest<
     @Override
     public User getSampleUser() {
         return getDataProvider().getSampleUser();
+    }
+
+    @Override
+    public TypeReference<Collection<String>> getIdsReferenceType() {
+        return new TypeReference<Collection<String>>() {
+            @Override
+            public Type getType() {
+                return super.getType();
+            }
+        };
     }
 }

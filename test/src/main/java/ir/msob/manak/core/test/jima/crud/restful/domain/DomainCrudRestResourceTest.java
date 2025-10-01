@@ -1,5 +1,6 @@
-package ir.msob.manak.core.test.jima.crud.base.domain;
+package ir.msob.manak.core.test.jima.crud.restful.domain;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudRepository;
 import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudService;
 import ir.msob.manak.core.model.jima.domain.Criteria;
@@ -11,8 +12,12 @@ import ir.msob.jima.core.beans.properties.JimaProperties;
 import ir.msob.jima.core.ral.mongo.commons.query.QueryBuilder;
 import ir.msob.jima.crud.api.restful.test.domain.BaseDomainCrudRestResourceTest;
 import ir.msob.jima.security.commons.TokenService;
+import ir.msob.manak.core.test.jima.crud.base.domain.DomainCrudDataProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.reactive.server.WebTestClient;
+
+import java.lang.reflect.Type;
+import java.util.Collection;
 
 public abstract class DomainCrudRestResourceTest<
         D extends Domain,
@@ -61,5 +66,15 @@ public abstract class DomainCrudRestResourceTest<
 
     public User getSampleUser() {
         return this.getDataProvider().getSampleUser();
+    }
+
+    @Override
+    public TypeReference<Collection<String>> getIdsReferenceType() {
+        return new TypeReference<Collection<String>>() {
+            @Override
+            public Type getType() {
+                return super.getType();
+            }
+        };
     }
 }
