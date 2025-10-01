@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ir.msob.manak.core</groupId>
+        <artifactId>manak-core</artifactId>
+        <version>${manak-core.version}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>core-service</artifactId>
+    <name>service</name>
+    <description>service</description>
+    <dependencies>
+        <dependency>
+            <groupId>ir.msob.manak.core</groupId>
+            <artifactId>core-model</artifactId>
+            <version>${manak-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ir.msob.jima.crud</groupId>
+            <artifactId>crud-starter-mongo</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>ir.msob.jima.crud</groupId>
+            <artifactId>crud-starter-restful</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ir.msob.jima.security</groupId>
+            <artifactId>security-starter-restful-oauth2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ir.msob.jima.crud</groupId>
+            <artifactId>crud-starter-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ir.msob.jima.security</groupId>
+            <artifactId>security-starter-kafka-oauth2</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
