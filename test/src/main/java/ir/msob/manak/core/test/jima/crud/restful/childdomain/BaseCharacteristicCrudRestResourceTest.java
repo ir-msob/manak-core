@@ -1,7 +1,6 @@
 package ir.msob.manak.core.test.jima.crud.restful.childdomain;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import ir.msob.manak.core.test.jima.crud.base.childdomain.ChildCrudRestResourceTest;
 import ir.msob.manak.core.model.jima.childdomain.characteristic.Characteristic;
 import ir.msob.manak.core.model.jima.childdomain.characteristic.CharacteristicCriteria;
 import ir.msob.manak.core.model.jima.security.User;

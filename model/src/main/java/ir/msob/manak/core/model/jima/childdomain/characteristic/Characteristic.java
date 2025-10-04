@@ -11,6 +11,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Characteristic extends ir.msob.jima.core.commons.childdomain.characteristic.Characteristic<String> {
+
     @Builder
     public Characteristic(String id, String parentId, String key, Serializable value, String dataType) {
         super(id, parentId, key, value, dataType);

@@ -1,10 +1,10 @@
 package ir.msob.manak.core.test.jima.crud.base.childdomain.characteristic;
 
-import ir.msob.manak.core.model.jima.childdomain.characteristic.Characteristic;
-import ir.msob.manak.core.model.jima.security.User;
 import ir.msob.jima.core.commons.domain.BaseDto;
 import ir.msob.jima.crud.service.childdomain.BaseChildDomainCrudService;
 import ir.msob.jima.crud.test.childdomain.BaseChildCrudDataProvider;
+import ir.msob.manak.core.model.jima.childdomain.characteristic.Characteristic;
+import ir.msob.manak.core.model.jima.security.User;
 
 import static ir.msob.jima.core.test.CoreTestData.DEFAULT_STRING;
 import static ir.msob.jima.core.test.CoreTestData.UPDATED_STRING;
