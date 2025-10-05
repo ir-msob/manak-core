@@ -39,10 +39,6 @@
             <artifactId>crud-starter-kafka-test</artifactId>
         </dependency>
         <dependency>
-            <groupId>ir.msob.jima.crud</groupId>
-            <artifactId>crud-starter-mongo-test</artifactId>
-        </dependency>
-        <dependency>
             <groupId>ir.msob.jima.security</groupId>
             <artifactId>security-starter-keycloak-test</artifactId>
         </dependency>
