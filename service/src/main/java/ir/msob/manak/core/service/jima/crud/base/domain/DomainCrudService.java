@@ -5,7 +5,6 @@ import ir.msob.manak.core.model.jima.domain.Domain;
 import ir.msob.manak.core.model.jima.domain.Dto;
 import ir.msob.manak.core.model.jima.security.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ir.msob.jima.core.ral.mongo.commons.query.QueryBuilder;
 import ir.msob.jima.crud.service.domain.BaseDomainCrudService;
 import ir.msob.jima.crud.service.domain.BeforeAfterComponent;
 import org.springframework.validation.annotation.Validated;
@@ -15,8 +14,8 @@ public abstract class DomainCrudService<
         D extends Domain,
         DTO extends Dto,
         C extends Criteria,
-        R extends DomainCrudRepository<D, C>>
-        implements BaseDomainCrudService<String, User, D, DTO, C, QueryBuilder, R> {
+        R extends DomainCrudRepository<D>>
+        implements BaseDomainCrudService<String, User, D, DTO, C, R> {
 
     private final BeforeAfterComponent beforeAfterComponent;
     private final ObjectMapper objectMapper;

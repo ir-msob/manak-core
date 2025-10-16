@@ -10,7 +10,6 @@ import ir.msob.manak.core.model.jima.domain.Dto;
 import ir.msob.manak.core.model.jima.security.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ir.msob.jima.core.beans.properties.JimaProperties;
-import ir.msob.jima.core.ral.mongo.commons.query.QueryBuilder;
 import ir.msob.jima.crud.api.kafka.client.ChannelUtil;
 import ir.msob.jima.crud.api.kafka.test.domain.BaseDomainCrudKafkaListenerTest;
 import ir.msob.manak.core.test.jima.crud.base.domain.DomainCrudDataProvider;
@@ -29,10 +28,10 @@ public abstract class DomainCrudKafkaListenerTest<
         D extends Domain,
         DTO extends Dto,
         C extends Criteria,
-        R extends DomainCrudRepository<D, C>,
+        R extends DomainCrudRepository<D>,
         S extends DomainCrudService<D, DTO, C, R>,
         DP extends DomainCrudDataProvider<D, DTO, C, R, S>>
-        implements BaseDomainCrudKafkaListenerTest<String, User, D, DTO, C, QueryBuilder, R, S, DP>
+        implements BaseDomainCrudKafkaListenerTest<String, User, D, DTO, C, R, S, DP>
         , ChannelTypeReference<DTO, C> {
 
     private final Duration sleepDuration = Duration.of(1, ChronoUnit.SECONDS);
@@ -68,11 +67,6 @@ public abstract class DomainCrudKafkaListenerTest<
     @Override
     public String getGroupId() {
         return groupId;
-    }
-
-    @Override
-    public Duration getSleepDuration() {
-        return sleepDuration;
     }
 
     @Override
