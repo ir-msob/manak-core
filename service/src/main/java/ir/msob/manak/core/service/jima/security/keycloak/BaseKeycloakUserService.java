@@ -1,12 +1,12 @@
 package ir.msob.manak.core.service.jima.security.keycloak;
 
-import ir.msob.manak.core.service.jima.security.Roles;
-import ir.msob.manak.core.model.jima.security.User;
 import com.google.common.collect.Sets;
 import ir.msob.jima.core.commons.security.BaseClaimKey;
 import ir.msob.jima.core.commons.security.BaseClaimKeyValue;
 import ir.msob.jima.core.commons.security.BaseUser;
 import ir.msob.jima.core.commons.security.BaseUserService;
+import ir.msob.manak.core.model.jima.security.User;
+import ir.msob.manak.core.service.jima.security.Roles;
 
 import java.util.*;
 
@@ -21,7 +21,10 @@ public interface BaseKeycloakUserService extends BaseUserService {
 
     @Override
     default <USER extends BaseUser> USER getUser(Map<String, Object> claims) {
-        SortedSet<String> roles = new TreeSet<>((List<String>) ((Map<String, Map<String, List<String>>>) claims.get(ClaimKey.REALM_ACCESS)).get(ClaimKey.KEYCLOAK_ROLES));
+        SortedSet<String> roles = new TreeSet<>();
+        if (claims.get(ClaimKey.REALM_ACCESS) != null && ((Map<String, Map<String, List<String>>>) claims.get(ClaimKey.REALM_ACCESS)).get(ClaimKey.KEYCLOAK_ROLES) != null)
+            roles = new TreeSet<>((List<String>) ((Map<String, Map<String, List<String>>>) claims.get(ClaimKey.REALM_ACCESS)).get(ClaimKey.KEYCLOAK_ROLES));
+
         return (USER) User.builder()
                 .id(String.valueOf(claims.get(BaseClaimKey.ID)))
                 .sessionId(String.valueOf(claims.get(BaseClaimKey.SESSION_ID)))
