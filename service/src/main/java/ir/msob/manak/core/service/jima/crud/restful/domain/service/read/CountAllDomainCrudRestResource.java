@@ -1,12 +1,12 @@
 package ir.msob.manak.core.service.jima.crud.restful.domain.service.read;
 
-import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudRepository;
-import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudService;
+import ir.msob.jima.crud.api.restful.service.domain.read.BaseCountAllDomainCrudRestResource;
 import ir.msob.manak.core.model.jima.domain.Criteria;
 import ir.msob.manak.core.model.jima.domain.Domain;
 import ir.msob.manak.core.model.jima.domain.Dto;
 import ir.msob.manak.core.model.jima.security.User;
-import ir.msob.jima.crud.api.restful.service.domain.read.BaseCountAllDomainCrudRestResource;
+import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudRepository;
+import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudService;
 
 public interface CountAllDomainCrudRestResource<
         D extends Domain,

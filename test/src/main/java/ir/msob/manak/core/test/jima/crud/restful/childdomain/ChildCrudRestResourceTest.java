@@ -1,8 +1,5 @@
 package ir.msob.manak.core.test.jima.crud.restful.childdomain;
 
-import ir.msob.manak.core.model.jima.childdomain.characteristic.Characteristic;
-import ir.msob.manak.core.model.jima.childdomain.characteristic.CharacteristicCriteria;
-import ir.msob.manak.core.model.jima.security.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ir.msob.jima.core.beans.properties.JimaProperties;
 import ir.msob.jima.core.commons.domain.BaseCriteria;
@@ -15,6 +12,9 @@ import ir.msob.jima.crud.service.domain.BaseDomainCrudService;
 import ir.msob.jima.crud.test.childdomain.BaseChildCrudDataProvider;
 import ir.msob.jima.crud.test.domain.BaseDomainCrudDataProvider;
 import ir.msob.jima.security.commons.TokenService;
+import ir.msob.manak.core.model.jima.childdomain.characteristic.Characteristic;
+import ir.msob.manak.core.model.jima.childdomain.characteristic.CharacteristicCriteria;
+import ir.msob.manak.core.model.jima.security.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.reactive.server.WebTestClient;
 

@@ -1,17 +1,17 @@
 package ir.msob.manak.core.service.jima.crud.kafka.domain.service;
 
-import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudRepository;
-import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudService;
-import ir.msob.manak.core.service.jima.security.UserService;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import ir.msob.jima.core.commons.client.BaseAsyncClient;
+import ir.msob.jima.core.commons.security.BaseUserService;
+import ir.msob.jima.crud.api.kafka.service.domain.BaseDomainCrudKafkaListener;
 import ir.msob.manak.core.model.jima.channel.ChannelTypeReference;
 import ir.msob.manak.core.model.jima.domain.Criteria;
 import ir.msob.manak.core.model.jima.domain.Domain;
 import ir.msob.manak.core.model.jima.domain.Dto;
 import ir.msob.manak.core.model.jima.security.User;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import ir.msob.jima.core.commons.client.BaseAsyncClient;
-import ir.msob.jima.core.commons.security.BaseUserService;
-import ir.msob.jima.crud.api.kafka.service.domain.BaseDomainCrudKafkaListener;
+import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudRepository;
+import ir.msob.manak.core.service.jima.crud.base.domain.DomainCrudService;
+import ir.msob.manak.core.service.jima.security.UserService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.ConsumerFactory;
 

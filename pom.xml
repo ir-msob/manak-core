@@ -41,8 +41,8 @@
     </modules>
     <properties>
         <!-- Manak Versions -->
-      <manak-parent.version>0.1.0</manak-parent.version>
-      <manak-core.version>0.1.0</manak-core.version>
+        <manak-parent.version>0.1.0</manak-parent.version>
+        <manak-core.version>0.1.0</manak-core.version>
 
         <!-- Maven Plugins -->
         <resolve-parent-version-maven-plugin.version>0.8</resolve-parent-version-maven-plugin.version>
@@ -60,5 +60,5 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-  </dependencyManagement>
+    </dependencyManagement>
 </project>

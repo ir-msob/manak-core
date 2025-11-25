@@ -1,9 +1,6 @@
 package ir.msob.manak.core.test.jima.crud.restful.childdomain;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import ir.msob.manak.core.model.jima.childdomain.characteristic.Characteristic;
-import ir.msob.manak.core.model.jima.childdomain.characteristic.CharacteristicCriteria;
-import ir.msob.manak.core.model.jima.security.User;
 import ir.msob.jima.core.commons.domain.BaseCriteria;
 import ir.msob.jima.core.commons.domain.BaseDomain;
 import ir.msob.jima.core.commons.domain.BaseDto;
@@ -12,6 +9,9 @@ import ir.msob.jima.crud.commons.domain.BaseDomainCrudRepository;
 import ir.msob.jima.crud.service.childdomain.BaseChildDomainCrudService;
 import ir.msob.jima.crud.service.domain.BaseDomainCrudService;
 import ir.msob.jima.crud.test.domain.BaseDomainCrudDataProvider;
+import ir.msob.manak.core.model.jima.childdomain.characteristic.Characteristic;
+import ir.msob.manak.core.model.jima.childdomain.characteristic.CharacteristicCriteria;
+import ir.msob.manak.core.model.jima.security.User;
 import ir.msob.manak.core.test.jima.crud.base.childdomain.characteristic.BaseCharacteristicCrudDataProvider;
 
 import java.lang.reflect.Type;

@@ -1,11 +1,11 @@
 package ir.msob.manak.core.service.jima.security;
 
-import ir.msob.manak.core.service.jima.security.keycloak.BaseKeycloakUserService;
-import ir.msob.manak.core.model.jima.childdomain.relatedobject.relatedparty.RelatedParty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ir.msob.jima.core.beans.properties.JimaProperties;
 import ir.msob.jima.core.commons.childdomain.relatedobject.relatedparty.RelatedPartyAbstract;
 import ir.msob.jima.core.commons.security.BaseUser;
+import ir.msob.manak.core.model.jima.childdomain.relatedobject.relatedparty.RelatedParty;
+import ir.msob.manak.core.service.jima.security.keycloak.BaseKeycloakUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

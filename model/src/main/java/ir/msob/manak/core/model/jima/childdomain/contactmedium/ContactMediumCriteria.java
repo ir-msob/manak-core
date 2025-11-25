@@ -12,6 +12,6 @@ import lombok.ToString;
 @ToString(callSuper = true)
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ContactMediumCriteria extends ContactMediumCriteriaAbstract<String,ContactMedium> {
+public class ContactMediumCriteria extends ContactMediumCriteriaAbstract<String, ContactMedium> {
 
 }

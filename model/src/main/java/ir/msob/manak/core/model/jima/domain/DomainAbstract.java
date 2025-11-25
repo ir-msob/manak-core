@@ -12,7 +12,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString(callSuper = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class DomainAbstract extends BaseDomainAbstract<String> implements Domain{
+public class DomainAbstract extends BaseDomainAbstract<String> implements Domain {
 
     public DomainAbstract(String id) {
         super(id);

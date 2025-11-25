@@ -1,9 +1,9 @@
 package ir.msob.manak.core.model.jima.childdomain.auditdomain;
 
-import ir.msob.manak.core.model.jima.childdomain.relatedobject.relatedparty.RelatedParty;
-import ir.msob.manak.core.model.jima.childdomain.relatedobject.relatedparty.RelatedPartyCriteria;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import ir.msob.jima.core.commons.childdomain.auditdomain.AuditDomainCriteriaAbstract;
+import ir.msob.manak.core.model.jima.childdomain.relatedobject.relatedparty.RelatedParty;
+import ir.msob.manak.core.model.jima.childdomain.relatedobject.relatedparty.RelatedPartyCriteria;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
