@@ -35,7 +35,7 @@ public abstract class DomainCrudDataProvider<
                 .sessionId(idService.<String>newId())
                 .username("user")
                 .audience("web")
-                .roles(new TreeSet<String>(Collections.singleton("USER"))) // TODO: Replace with real role
+                .roles(new TreeSet<>(Collections.singleton("USER")))
                 .build();
     }
 }

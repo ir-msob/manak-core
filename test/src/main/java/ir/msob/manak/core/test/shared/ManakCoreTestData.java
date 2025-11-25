@@ -20,32 +20,28 @@ public class ManakCoreTestData {
     public static final SortedSet<Characteristic> DEFAULT_REQUIRED_CHARACTERISTICS = Sets.newTreeSet(Collections.singleton(DEFAULT_REQUIRED_CHARACTERISTIC));
     public static final Characteristic DEFAULT_CHARACTERISTIC = initDefaultCharacteristic();
     public static final SortedSet<Characteristic> DEFAULT_CHARACTERISTICS = Sets.newTreeSet(Collections.singleton(DEFAULT_CHARACTERISTIC));
-
     public static final Characteristic UPDATED_REQUIRED_CHARACTERISTIC = initUpdatedRequiredCharacteristic();
     public static final SortedSet<Characteristic> UPDATED_REQUIRED_CHARACTERISTICS = Sets.newTreeSet(Collections.singleton(UPDATED_REQUIRED_CHARACTERISTIC));
     public static final Characteristic UPDATED_CHARACTERISTIC = initUpdatedCharacteristic();
     public static final SortedSet<Characteristic> UPDATED_CHARACTERISTICS = Sets.newTreeSet(Collections.singleton(DEFAULT_CHARACTERISTIC));
-
     // ContactMedium constants
     public static final ContactMedium DEFAULT_REQUIRED_CONTACT_MEDIUM = initDefaultRequiredContactMedium();
     public static final ContactMedium DEFAULT_CONTACT_MEDIUM = initDefaultContactMedium();
-
     public static final ContactMedium UPDATED_REQUIRED_CONTACT_MEDIUM = initUpdatedRequiredContactMedium();
     public static final ContactMedium UPDATED_CONTACT_MEDIUM = initUpdatedContactMedium();
-
     // ObjectValidation constants
     public static final ObjectValidation DEFAULT_REQUIRED_OBJECT_VALIDATION = initDefaultRequiredObjectValidation();
     public static final ObjectValidation DEFAULT_OBJECT_VALIDATION = initDefaultObjectValidation();
-
     public static final ObjectValidation UPDATED_REQUIRED_OBJECT_VALIDATION = initUpdatedRequiredObjectValidation();
     public static final ObjectValidation UPDATED_OBJECT_VALIDATION = initUpdatedObjectValidation();
-
     // RelatedAction constants
     public static final RelatedAction DEFAULT_REQUIRED_RELATED_ACTION = initDefaultRequiredRelatedAction();
     public static final RelatedAction DEFAULT_RELATED_ACTION = initDefaultRelatedAction();
-
     public static final RelatedAction UPDATED_REQUIRED_RELATED_ACTION = initUpdatedRequiredRelatedAction();
     public static final RelatedAction UPDATED_RELATED_ACTION = initUpdatedRelatedAction();
+
+    private ManakCoreTestData() {
+    }
 
     /**
      * Updates the provided childdomain party with updated values.

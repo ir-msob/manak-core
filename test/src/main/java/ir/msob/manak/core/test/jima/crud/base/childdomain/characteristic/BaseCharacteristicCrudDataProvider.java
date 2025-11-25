@@ -15,7 +15,7 @@ public abstract class BaseCharacteristicCrudDataProvider<DTO extends BaseDto<Str
     private static Characteristic characteristic;
     private final CS childService;
 
-    public BaseCharacteristicCrudDataProvider(CS childService) {
+    protected BaseCharacteristicCrudDataProvider(CS childService) {
         this.childService = childService;
     }
 

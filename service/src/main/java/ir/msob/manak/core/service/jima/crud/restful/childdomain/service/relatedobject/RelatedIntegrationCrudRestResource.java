@@ -20,7 +20,7 @@ public abstract class RelatedIntegrationCrudRestResource<DTO extends Dto, S exte
     private final S childService;
     private final UserService userService;
 
-    public RelatedIntegrationCrudRestResource(S childService, UserService userService) {
+    protected RelatedIntegrationCrudRestResource(S childService, UserService userService) {
         this.childService = childService;
         this.userService = userService;
     }

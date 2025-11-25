@@ -20,7 +20,7 @@ public abstract class RelatedProcessCrudRestResource<DTO extends Dto, S extends 
     private final S childService;
     private final UserService userService;
 
-    public RelatedProcessCrudRestResource(S childService, UserService userService) {
+    protected RelatedProcessCrudRestResource(S childService, UserService userService) {
         this.childService = childService;
         this.userService = userService;
     }

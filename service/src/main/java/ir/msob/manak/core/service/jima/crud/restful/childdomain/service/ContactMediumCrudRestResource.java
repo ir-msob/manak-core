@@ -20,7 +20,7 @@ public abstract class ContactMediumCrudRestResource<DTO extends Dto, S extends C
     private final S childService;
     private final UserService userService;
 
-    public ContactMediumCrudRestResource(S childService, UserService userService) {
+    protected ContactMediumCrudRestResource(S childService, UserService userService) {
         this.childService = childService;
         this.userService = userService;
     }

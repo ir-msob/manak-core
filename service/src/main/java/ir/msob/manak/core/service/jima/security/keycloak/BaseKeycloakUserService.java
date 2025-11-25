@@ -1,12 +1,8 @@
 package ir.msob.manak.core.service.jima.security.keycloak;
 
 import com.google.common.collect.Sets;
-import ir.msob.jima.core.commons.security.BaseClaimKey;
-import ir.msob.jima.core.commons.security.BaseClaimKeyValue;
-import ir.msob.jima.core.commons.security.BaseUser;
-import ir.msob.jima.core.commons.security.BaseUserService;
+import ir.msob.jima.core.commons.security.*;
 import ir.msob.manak.core.model.jima.security.User;
-import ir.msob.manak.core.service.jima.security.Roles;
 
 import java.util.*;
 
@@ -15,7 +11,7 @@ public interface BaseKeycloakUserService extends BaseUserService {
             .id("00000000-0000-0000-0000-000000000000")
             .sessionId("00000000-0000-0000-0000-000000000000")
             .username("system")
-            .roles(Sets.newTreeSet(Collections.singleton(Roles.ADMIN)))
+            .roles(Sets.newTreeSet(Collections.singleton(BaseRoles.ADMIN)))
             .audience(BaseClaimKeyValue.AUDIENCE_WEB)
             .build();
 

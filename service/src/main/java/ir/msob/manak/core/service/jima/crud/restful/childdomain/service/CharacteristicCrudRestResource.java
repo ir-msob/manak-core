@@ -20,7 +20,7 @@ public abstract class CharacteristicCrudRestResource<DTO extends Dto, S extends 
     private final S childService;
     private final UserService userService;
 
-    public CharacteristicCrudRestResource(S childService, UserService userService) {
+    protected CharacteristicCrudRestResource(S childService, UserService userService) {
         this.childService = childService;
         this.userService = userService;
     }

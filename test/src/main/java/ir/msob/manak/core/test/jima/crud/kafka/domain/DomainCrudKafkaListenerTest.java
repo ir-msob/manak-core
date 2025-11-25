@@ -19,8 +19,6 @@ import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 
 import java.lang.reflect.Type;
-import java.time.Duration;
-import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 import java.util.UUID;
 
@@ -34,7 +32,6 @@ public abstract class DomainCrudKafkaListenerTest<
         implements BaseDomainCrudKafkaListenerTest<String, User, D, DTO, C, R, S, DP>
         , ChannelTypeReference<DTO, C> {
 
-    private final Duration sleepDuration = Duration.of(1, ChronoUnit.SECONDS);
     @Autowired
     private DP dataProvider;
     @Autowired

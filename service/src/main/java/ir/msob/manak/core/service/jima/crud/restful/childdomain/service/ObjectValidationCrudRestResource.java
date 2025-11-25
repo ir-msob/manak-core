@@ -20,7 +20,7 @@ public abstract class ObjectValidationCrudRestResource<DTO extends Dto, S extend
     private final S childService;
     private final UserService userService;
 
-    public ObjectValidationCrudRestResource(S childService, UserService userService) {
+    protected ObjectValidationCrudRestResource(S childService, UserService userService) {
         this.childService = childService;
         this.userService = userService;
     }
